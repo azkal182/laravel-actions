@@ -1,0 +1,16 @@
+name: auto build
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: 167.99.72.59
+        username: root
+        password: Azkal182AA
+        port: 22
+        script: whoami && pwd 
